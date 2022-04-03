@@ -47,7 +47,7 @@ def create_button_line(win, tab_canvas):
     blue_button= PIL.ImageTk.PhotoImage(master=canvas, image=resized_blue_button)
     canvas.image = blue_button
     for x in range(7):
-        Button(canvas, image=blue_button,bg=bg_color, borderwidth=0, activebackground=bg_color, command=partial(fill_column,tab_canvas,x)).place(x=p_x, y=p_y)
+        Button(canvas, image=blue_button,bg=bg_color, borderwidth=0, activebackground=bg_color, command=partial(fill_column,win,tab_canvas,x)).place(x=p_x, y=p_y)
         p_x += 100
 
     return canvas
@@ -57,5 +57,5 @@ def create_restart_button(win, tab_canvas):
     w = 300
     h = 150
     frame = Frame(win, bg=bg_color,width=w, height=h, borderwidth=0)
-    Button(frame, text="RESTART",command=partial(restart_game, tab_canvas), borderwidth=0, bg = "green", fg = "black" ).pack(pady=30, fill=X)
-    frame.place(x=1300, y=1000)
+    Button(frame, text="RESTART",command=partial(restart_game, tab_canvas), borderwidth=0, bg = "green", fg = "black", padx=50, pady=20 ).pack()
+    frame.place(x=1450, y=1000)
