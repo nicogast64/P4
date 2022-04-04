@@ -29,7 +29,7 @@ def create_circle_tab(win):
         p_x= 20
         line.clear()
         for y in range(7):
-            circle = canvas.create_oval(p_x,p_y,p_x+60,p_y+60, fill=bg_color, )
+            circle = canvas.create_oval(p_x,p_y,p_x+60,p_y+60, fill=bg_color)
             p_x += 100
         p_y+= 100
     return canvas

@@ -31,4 +31,3 @@ frame.pack()
 canvas_grid.place(x=610, y=200)
 canvas_button_bar.place(x=610, y=830)
 win.mainloop()
-   
